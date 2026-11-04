@@ -222,6 +222,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .person .era{font-size:.82rem;font-weight:700;color:var(--link)}
 .person p{font-size:.94rem;color:var(--muted);margin-top:6px}
 .badge{display:inline-block;margin-top:8px;background:var(--yellow);color:#2B0A0E;font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:999px}
+.sports-head{margin:40px 0 18px}
+.sports-head h3{font-family:var(--f-display);font-size:1.55rem}
+.sports-head p{color:var(--muted);margin-top:5px}
 .jn{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
 
 /* stories */
@@ -336,13 +339,31 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .why-stories-head{margin:48px 0 20px;max-width:760px}
 .why-stories-head h3{font-size:1.8rem}
 .why-stories-head p{color:var(--muted);margin-top:6px}
+.culture-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+.culture-card{background:var(--surface);border:2px solid var(--line);padding:22px;min-width:0}
+.culture-card:nth-child(even){border-top:6px solid var(--red)}
+.culture-card:nth-child(odd){border-top:6px solid var(--yellow)}
+.culture-photo{margin:0 0 16px}
+.culture-photo img{display:block;width:100%;height:190px;object-fit:cover}
+.culture-card h3{font-family:var(--f-display);font-size:1.35rem;margin:0 0 8px}
+.culture-card p{color:var(--muted);font-size:.96rem}
+.culture-card p+p{margin-top:10px}
+.culture-source{margin-top:24px;color:var(--muted);font-size:.88rem}
+.culture-source a{color:var(--link);font-weight:700}
+.origin-table-wrap{overflow-x:auto;background:var(--surface);border:2px solid var(--line)}
+.origin-table{width:100%;min-width:560px;border-collapse:collapse;font-size:.95rem}
+.origin-table th,.origin-table td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+.origin-table th{color:var(--muted);font-size:.85rem}
+.origin-table td:nth-child(2),.origin-table td:nth-child(3),.origin-table th:nth-child(2),.origin-table th:nth-child(3){text-align:right;font-variant-numeric:tabular-nums}
+.origin-table tr.total{font-weight:800;background:var(--surface-2)}
+.origin-note{margin-top:14px;color:var(--muted);font-size:.88rem}
 </style>
 
 <header class="bar">
   <div class="wrap">
     <a class="brand" href="#top">ಸಮಗ್ರ ಕರ್ನಾಟಕ</a>
     <nav class="nav" aria-label="ವಿಭಾಗಗಳು">
-      <a href="#message">ಸಂದೇಶ</a><a href="#benefits">ಲಾಭ</a><a href="karnataka-population.html">ಜನಸಂಖ್ಯೆ</a><a href="#subsidy">ಸಹಾಯಧನ</a><a href="#map">ನಕ್ಷೆ</a><a href="#temples">ದೇವಾಲಯಗಳು</a><a href="#places">ಪ್ರವಾಸಿ ತಾಣಗಳು</a><a href="#poets">ಕವಿಗಳು</a><a href="#scientists">ವಿಜ್ಞಾನಿಗಳು</a><a href="#achievers">ಸಾಧಕರು</a><a href="#stories">ಕಥೆಗಳು</a><a href="#news">ಸುದ್ದಿ</a><a href="#founders">ಸ್ಫೂರ್ತಿ</a>
+      <a href="#message">ಸಂದೇಶ</a><a href="#benefits">ಲಾಭ</a><a href="karnataka-population.html">ಜನಸಂಖ್ಯೆ</a><a href="#subsidy">ಸಹಾಯಧನ</a><a href="#map">ನಕ್ಷೆ</a><a href="#temples">ದೇವಾಲಯಗಳು</a><a href="#places">ಪ್ರವಾಸಿ ತಾಣಗಳು</a><a href="#culture">ಸಂಸ್ಕೃತಿ</a><a href="#poets">ಕವಿಗಳು</a><a href="#scientists">ವಿಜ್ಞಾನಿಗಳು</a><a href="#achievers">ಸಾಧಕರು</a><a href="#stories">ಕಥೆಗಳು</a><a href="#news">ಸುದ್ದಿ</a><a href="#founders">ಸ್ಫೂರ್ತಿ</a>
     </nav>
     <a class="btn btn-yellow" href="https://chat.whatsapp.com/EFzCOUPClAM2xcx8OzHrjf" target="_blank" rel="noopener">ಸೇರಿ</a>
   </div>
@@ -397,6 +418,24 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </div>
       <div class="goal">ನಮ್ಮ ಗುರಿ ಒಂದೇ. <em>ಬೆಂಗಳೂರಿನ ಅಭಿವೃದ್ಧಿಯನ್ನು ತಡೆಯುವುದಲ್ಲ,</em> ಕರ್ನಾಟಕದ ಪ್ರತಿಯೊಂದು ಜಿಲ್ಲೆಯನ್ನೂ ಅಭಿವೃದ್ಧಿಯ ಪಥದಲ್ಲಿ ಮುನ್ನಡೆಸುವುದು.</div>
     </div>
+  </div>
+</section>
+
+<section class="sec band-soft" id="bengaluru-origin">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow" style="color:var(--link)">ಬೆಂಗಳೂರು · 2011</div><h2>ನಗರದ ಜನನಸ್ಥಳದ ಹಂಚಿಕೆ</h2><p>2011ರಲ್ಲಿ ಸುಮಾರು 85 ಲಕ್ಷ ಜನರಿದ್ದ ಬೆಂಗಳೂರು ನಗರ ಸಮೂಹದ ಕುರಿತು ನೀಡಲಾದ ಅಂದಾಜು ಹಂಚಿಕೆ.</p></div>
+    <div class="origin-table-wrap">
+      <table class="origin-table">
+        <thead><tr><th>ವರ್ಗ</th><th>ಪಾಲು</th><th>ಅಂದಾಜು ಜನರು</th></tr></thead>
+        <tbody>
+          <tr><td>ಬೆಂಗಳೂರಿನಲ್ಲಿ ಜನಿಸಿದವರು</td><td>~49%</td><td>~41 ಲಕ್ಷ</td></tr>
+          <tr><td>ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳಿಂದ ಬಂದವರು</td><td>~33%</td><td>~28 ಲಕ್ಷ</td></tr>
+          <tr class="total"><td>ಕರ್ನಾಟಕದಿಂದ ಒಟ್ಟು</td><td>~82%</td><td>~70 ಲಕ್ಷ</td></tr>
+          <tr><td>ಇತರ ರಾಜ್ಯಗಳಿಂದ ಬಂದವರು</td><td>~18%</td><td>~15 ಲಕ್ಷ</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="origin-note">ಇವು ಸುತ್ತುಗಟ್ಟಿದ ಅಂದಾಜುಗಳು; ಪ್ರತಿಯೊಂದು ಪ್ರಮಾಣ/ಸಂಖ್ಯೆಯನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಸುತ್ತುಗಟ್ಟಿರುವುದರಿಂದ ಮೊತ್ತದಲ್ಲಿ ಸಣ್ಣ ವ್ಯತ್ಯಾಸ ಇರಬಹುದು. <a href="karnataka-population.html">ವಿಸ್ತೃತ ಜನಸಂಖ್ಯೆ ಅಂಕಿ-ಅಂಶಗಳನ್ನು ನೋಡಿ →</a></p>
   </div>
 </section>
 
@@ -512,6 +551,51 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   </div>
 </section>
 
+<section class="sec" id="culture">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="color:var(--link)">ನಮ್ಮ ಸಂಸ್ಕೃತಿ</div>
+      <h2>ಕರ್ನಾಟಕದ ಕಲೆ, ಹಬ್ಬ ಮತ್ತು ಅಡುಗೆ</h2>
+      <p>ಕರಾವಳಿ, ಮಲೆನಾಡು, ಬಯಲುಸೀಮೆ ಮತ್ತು ಉತ್ತರ ಕರ್ನಾಟಕದ ಬದುಕು, ಭಾಷೆ, ಸಂಗೀತ, ನೃತ್ಯ ಹಾಗೂ ಆಹಾರದಲ್ಲಿ ನಾಡಿನ ವೈವಿಧ್ಯ ಕಾಣುತ್ತದೆ.</p>
+    </div>
+    <div class="culture-grid">
+      <article class="culture-card">
+        <figure class="culture-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Yakshagana_Performance.jpg" alt="ಬಣ್ಣದ ವೇಷಭೂಷಣದೊಂದಿಗೆ ಯಕ್ಷಗಾನ ಪ್ರದರ್ಶನ" loading="lazy" decoding="async">
+        </figure>
+        <h3>ಜನಪದ ನೃತ್ಯ ಮತ್ತು ರಂಗಕಲೆ</h3>
+        <p><strong>ಯಕ್ಷಗಾನ</strong> ಕರಾವಳಿ ಮತ್ತು ಮಲೆನಾಡಿನ ಪ್ರಸಿದ್ಧ ಸಂಗೀತ-ನೃತ್ಯ-ನಾಟಕ ಪರಂಪರೆ. ವೇಷಭೂಷಣ, ತಾಳ ಮತ್ತು ಕಥನ ಇದರ ವಿಶೇಷ.</p>
+        <p><strong>ಡೊಳ್ಳು ಕುಣಿತ</strong> ಸಮೂಹವಾಗಿ ಡೊಳ್ಳು ಬಾರಿಸುತ್ತಾ ಪ್ರದರ್ಶಿಸುವ ಶಕ್ತಿಯುತ ಜನಪದ ಕಲೆ. ವೀರಗಾಸೆ ಮತ್ತು ಕಂಸಾಳೆಯೂ ಕರ್ನಾಟಕದ ಪ್ರಮುಖ ಪ್ರದರ್ಶನ ಕಲೆಗಳು.</p>
+      </article>
+      <article class="culture-card">
+        <figure class="culture-photo">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Bisi_Bele_Bath-Diu-DSC001.jpg/1280px-Bisi_Bele_Bath-Diu-DSC001.jpg" alt="ಕರ್ನಾಟಕದ ಬಿಸಿ ಬೇಳೆ ಬಾತ್" loading="lazy" decoding="async">
+        </figure>
+        <h3>ಪ್ರದೇಶದಿಂದ ಪ್ರದೇಶಕ್ಕೆ ಆಹಾರ</h3>
+        <p><strong>ಉತ್ತರ ಕರ್ನಾಟಕ:</strong> ಜೋಳದ ರೊಟ್ಟಿ, ಎಣ್ಣೆಗಾಯಿ ಮತ್ತು ಶೇಂಗಾ ಚಟ್ನಿ. <strong>ದಕ್ಷಿಣ ಕರ್ನಾಟಕ:</strong> ರಾಗಿ ಮುದ್ದೆ, ಬಿಸಿ ಬೇಳೆ ಬಾತ್ ಮತ್ತು ಮೈಸೂರು ಮಸಾಲೆ ದೋಸೆ.</p>
+        <p><strong>ಕರಾವಳಿ:</strong> ನೀರ್ ದೋಸೆ, ಕೋರಿ ರೊಟ್ಟಿ ಮತ್ತು ಸ್ಥಳೀಯ ಸಮುದ್ರಾಹಾರ. <strong>ಮೈಸೂರು:</strong> ಮೈಸೂರು ಪಾಕ್; <strong>ಮದ್ದೂರು:</strong> ಮದ್ದೂರು ವಡೆ.</p>
+      </article>
+      <article class="culture-card">
+        <figure class="culture-photo">
+          <img src="karnataka-photos/mysore-dasara.jpg" alt="ಮೈಸೂರು ದಸರಾ ಜಂಬೂಸವಾರಿ" loading="lazy" decoding="async">
+        </figure>
+        <h3>ಹಬ್ಬಗಳು ಮತ್ತು ಆಚರಣೆಗಳು</h3>
+        <p><strong>ಮೈಸೂರು ದಸರಾ</strong> ಜಂಬೂಸವಾರಿ, ಸಂಗೀತ ಮತ್ತು ಬೆಳಕಿನ ಸಂಭ್ರಮಕ್ಕೆ ಹೆಸರುವಾಸಿ. <strong>ಯುಗಾದಿ</strong> ಕನ್ನಡ ಹೊಸ ವರ್ಷದ ಆಚರಣೆ.</p>
+        <p>ಕರಾವಳಿಯ <strong>ಕಂಬಳ</strong> ಸಾಂಪ್ರದಾಯಿಕ ಕೋಣಗಳ ಓಟದ ಕ್ರೀಡೆ. ಹಂಪಿ ಉತ್ಸವವು ವಿಜಯನಗರದ ಕಲೆ ಮತ್ತು ಪರಂಪರೆಯನ್ನು ನೆನಪಿಸುತ್ತದೆ.</p>
+      </article>
+      <article class="culture-card">
+        <figure class="culture-photo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Channapatna-toys.jpg" alt="ಚನ್ನಪಟ್ಟಣದ ಬಣ್ಣದ ಮರದ ಆಟಿಕೆಗಳು" loading="lazy" decoding="async">
+        </figure>
+        <h3>ಕರಕುಶಲ ಮತ್ತು ನಾಡಿನ ವೈವಿಧ್ಯ</h3>
+        <p>ಚನ್ನಪಟ್ಟಣದ ಮರದ ಆಟಿಕೆಗಳು, ಮೈಸೂರು ರೇಷ್ಮೆ, ಶ್ರೀಗಂಧದ ಕೆತ್ತನೆ, ಇಳಕಲ್ ಸೀರೆ ಮತ್ತು ಬಿದ್ರಿ ಲೋಹಕಲೆ ಕರ್ನಾಟಕದ ವಿಶಿಷ್ಟ ಕರಕುಶಲ ಪರಂಪರೆಗಳು.</p>
+        <p>ಕನ್ನಡದ ಜೊತೆಗೆ ತುಳು, ಕೊಂಕಣಿ, ಕೊಡವ, ಉರ್ದು ಸೇರಿದಂತೆ ಹಲವು ಭಾಷೆಗಳು ಮತ್ತು ಸಮುದಾಯಗಳು ಕರ್ನಾಟಕದ ಸಾಂಸ್ಕೃತಿಕ ವೈವಿಧ್ಯವನ್ನು ರೂಪಿಸುತ್ತವೆ.</p>
+      </article>
+    </div>
+    <p class="culture-source">ಇನ್ನಷ್ಟು ಓದಿ: <a href="https://www.incredibleindia.gov.in/en/karnataka" target="_blank" rel="noopener noreferrer">ಭಾರತ ಪ್ರವಾಸೋದ್ಯಮ — ಕರ್ನಾಟಕದ ಹಬ್ಬ, ಕಲೆ ಮತ್ತು ಆಹಾರ</a> · <a href="https://karnatakatourism.org/en/" target="_blank" rel="noopener noreferrer">ಕರ್ನಾಟಕ ಪ್ರವಾಸೋದ್ಯಮ</a>.</p>
+  </div>
+</section>
+
 <section class="sec band-red" id="poets">
   <div class="wrap">
     <div class="sec-head"><div class="eyebrow" style="color:var(--yellow)">ಕನ್ನಡ ಕವಿಗಳು ಮತ್ತು ಸಾಹಿತಿಗಳು</div><h2>ಕನ್ನಡದ ಎಂಟು ಜ್ಞಾನಪೀಠ</h2><p>ಕನ್ನಡ ಭಾಷೆಗೆ ಇದುವರೆಗೆ ಎಂಟು ಜ್ಞಾನಪೀಠ ಪ್ರಶಸ್ತಿಗಳು ಸಂದಿವೆ. ಇದು ಭಾರತದ ಯಾವುದೇ ಭಾಷೆಗೆ ಸಿಕ್ಕ ಅತ್ಯಧಿಕ ಸಂಖ್ಯೆಗಳಲ್ಲಿ ಒಂದು.</p></div>
@@ -528,8 +612,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 
 <section class="sec band-soft" id="achievers">
   <div class="wrap">
-    <div class="sec-head"><div class="eyebrow" style="color:var(--link)">ವೈದ್ಯರು ಮತ್ತು ಸಾಧಕರು</div><h2>ಡಾಕ್ಟರೇಟ್, ಪದ್ಮ ಮತ್ತು ಭಾರತ ರತ್ನ</h2><p>ಸೇವೆ, ಕಲೆ ಮತ್ತು ಸಮಾಜಕ್ಕಾಗಿ ದುಡಿದು ರಾಷ್ಟ್ರೀಯ ಗೌರವ ಪಡೆದ ಕನ್ನಡಿಗರು. ಇವರಲ್ಲಿ ಬಹುಪಾಲು ಮಂದಿ ಬೆಂಗಳೂರಲ್ಲ, ಹಳ್ಳಿಗಳಿಂದ ಬಂದವರು. ಪ್ರತಿ ಕಾರ್ಡ್‌ನಲ್ಲಿ ಅವರ ಹುಟ್ಟೂರನ್ನು ತೋರಿಸಿದ್ದೇವೆ.</p></div>
+    <div class="sec-head"><div class="eyebrow" style="color:var(--link)">ವೈದ್ಯರು ಮತ್ತು ಸಾಧಕರು</div><h2>ಡಾಕ್ಟರೇಟ್, ಪದ್ಮ ಮತ್ತು ಭಾರತ ರತ್ನ</h2><p>ಸೇವೆ, ಕಲೆ ಮತ್ತು ಸಮಾಜಕ್ಕಾಗಿ ದುಡಿದು ರಾಷ್ಟ್ರೀಯ ಗೌರವ ಪಡೆದವರು. ಲಭ್ಯವಿರುವ ಮಾಹಿತಿಯಂತೆ ಪ್ರತಿ ಕಾರ್ಡ್‌ನಲ್ಲಿ ಹುಟ್ಟೂರು ಅಥವಾ ಸೇವೆಯ ನೆಲವನ್ನು ಕೊಟ್ಟಿದ್ದೇವೆ.</p></div>
     <div class="people" id="ach-grid"></div>
+    <div class="sports-head"><h3>ಕ್ರೀಡಾ ಸಾಧಕರು</h3><p>ವಿವಿಧ ಕ್ರೀಡೆಗಳಲ್ಲಿ ದೇಶವನ್ನು ಪ್ರತಿನಿಧಿಸಿ ಗಮನಾರ್ಹ ಸಾಧನೆ ಮಾಡಿದವರು. ಸ್ಥಳದ ವಿವರವು ಹುಟ್ಟೂರು; ನಗರ ಅಥವಾ ಪಟ್ಟಣವಾದಲ್ಲಿ ಅದನ್ನೇ ಸೂಚಿಸಿದ್ದೇವೆ.</p></div>
+    <div class="people" id="sport-grid"></div>
   </div>
 </section>
 
@@ -831,6 +917,13 @@ ach:[
 ['ಪಂಡಿತ್ ಭೀಮಸೇನ ಜೋಶಿ','1922–2011','ಗದಗ ಜಿಲ್ಲೆಯ ರೋಣದಲ್ಲಿ ಜನಿಸಿದ ಹಿಂದೂಸ್ತಾನಿ ಸಂಗೀತಗಾರ. ಮಿಲೇ ಸುರ್ ಮೇರಾ ತುಮ್ಹಾರಾ ಹಾಡಿನ ಧ್ವನಿ.','ಭಾರತ ರತ್ನ 2009'],
 ['ಸುಧಾ ಮೂರ್ತಿ','ಜನನ 1950','ಶಿಗ್ಗಾವಿಯಲ್ಲಿ ಜನಿಸಿದ ಲೇಖಕಿ ಮತ್ತು ಸಮಾಜ ಸೇವಕಿ. ಇನ್ಫೋಸಿಸ್ ಪ್ರತಿಷ್ಠಾನದ ಮೂಲಕ ಶಾಲೆ, ಗ್ರಂಥಾಲಯ ಮತ್ತು ಆರೋಗ್ಯ ಸೇವೆ.','ಪದ್ಮ ಭೂಷಣ 2023'],
 ['ಪುನೀತ್ ರಾಜಕುಮಾರ್','1975–2021','ನಟ ಮತ್ತು ಸಮಾಜ ಸೇವಕ. ಉಚಿತ ಶಾಲೆ, ವೃದ್ಧಾಶ್ರಮ ಮತ್ತು ಗೋಶಾಲೆ ನಡೆಸಿದರು. ಕರ್ನಾಟಕ ರತ್ನ ಗೌರವ ಮರಣೋತ್ತರ.','ಕರ್ನಾಟಕ ರತ್ನ 2021']
+],
+sports:[
+['ಪ್ರಕಾಶ್ ಪಡುಕೋಣೆ','ಜನನ 1955','ಬ್ಯಾಡ್ಮಿಂಟನ್‌ನಲ್ಲಿ 1980ರ ಆಲ್ ಇಂಗ್ಲೆಂಡ್ ಪ್ರಶಸ್ತಿ ಗೆದ್ದ ಮೊದಲ ಭಾರತೀಯ. ಆ ವರ್ಷ ವಿಶ್ವದ ನಂ. 1 ಆಟಗಾರರಾದರು.','ಆಲ್ ಇಂಗ್ಲೆಂಡ್ ಚಾಂಪಿಯನ್ 1980'],
+['ಅನಿಲ್ ಕುಂಬ್ಳೆ','ಜನನ 1970','ಭಾರತದ ಟೆಸ್ಟ್ ಕ್ರಿಕೆಟ್‌ನ ಶ್ರೇಷ್ಠ ಬೌಲರ್‌ಗಳಲ್ಲಿ ಒಬ್ಬರು. ಒಂದೇ ಟೆಸ್ಟ್ ಇನ್ನಿಂಗ್ಸ್‌ನಲ್ಲಿ 10 ವಿಕೆಟ್ ಪಡೆದ ಎರಡನೇ ಬೌಲರ್; ಟೆಸ್ಟ್‌ನಲ್ಲಿ 619 ವಿಕೆಟ್.','ಪದ್ಮಶ್ರೀ 2005 · ಪದ್ಮಭೂಷಣ 2009'],
+['ಜವಗಲ್ ಶ್ರೀನಾಥ್','ಜನನ 1969','ಭಾರತದ ಪ್ರಮುಖ ವೇಗದ ಬೌಲರ್. ಏಕದಿನ ಪಂದ್ಯಗಳಲ್ಲಿ 315 ವಿಕೆಟ್ ಪಡೆದು ನಿವೃತ್ತರಾದರು.','ಅರ್ಜುನ ಪ್ರಶಸ್ತಿ 1996'],
+['ವೇದಾ ಕೃಷ್ಣಮೂರ್ತಿ','ಜನನ 1992','ಭಾರತ ಮಹಿಳಾ ಕ್ರಿಕೆಟ್ ತಂಡದ ಆಟಗಾರ್ತಿ. 2017ರ ಏಕದಿನ ವಿಶ್ವಕಪ್‌ನಲ್ಲಿ ಫೈನಲ್ ತಲುಪಿದ ತಂಡದ ಸದಸ್ಯೆ.','ಅರ್ಜುನ ಪ್ರಶಸ್ತಿ 2015'],
+['ಎಂ.ಆರ್. ಪೂವಮ್ಮ','ಜನನ 1990','400 ಮೀಟರ್ ಓಟಗಾರ್ತಿ. ಭಾರತದ 4×400 ಮೀಟರ್ ರಿಲೇ ತಂಡದೊಂದಿಗೆ 2014 ಮತ್ತು 2018ರ ಏಷ್ಯನ್ ಕ್ರೀಡಾಕೂಟಗಳಲ್ಲಿ ಚಿನ್ನ ಗೆದ್ದರು.','ಅರ್ಜುನ ಪ್ರಶಸ್ತಿ 2015']
 ]};
 const PILLARS=[
 ['ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ','ರಸ್ತೆ, ನೀರು, ಆರೋಗ್ಯ ಮತ್ತು ಶಾಲೆ ಪ್ರತಿ ಹಳ್ಳಿಗೂ ತಲುಪಬೇಕು.'],
@@ -1028,13 +1121,13 @@ function cardsFor(kind,el){
     el.appendChild(c)})
 }
 cardsFor('t',$('#tgrid'));cardsFor('p',$('#pgrid'));
-const VILL={'ಪಂಪ':'ಹುಟ್ಟೂರು: ಅಣ್ಣಿಗೇರಿ, ಧಾರವಾಡ ಜಿಲ್ಲೆ (ಎಂದು ಹೇಳಲಾಗುತ್ತದೆ)','ಬಸವಣ್ಣ':'ಹುಟ್ಟೂರು: ಬಸವನ ಬಾಗೇವಾಡಿ, ವಿಜಯಪುರ ಜಿಲ್ಲೆ','ಅಕ್ಕ ಮಹಾದೇವಿ':'ಹುಟ್ಟೂರು: ಉಡುತಡಿ, ಶಿಕಾರಿಪುರ ತಾಲ್ಲೂಕು, ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ','ಕನಕದಾಸ':'ಹುಟ್ಟೂರು: ಬಾಡ, ಹಾವೇರಿ ಜಿಲ್ಲೆ','ಕುವೆಂಪು':'ಹುಟ್ಟೂರು: ಹಿರೇಕೊಡಿಗೆ, ಕೊಪ್ಪ ತಾಲ್ಲೂಕು, ಚಿಕ್ಕಮಗಳೂರು ಜಿಲ್ಲೆ','ದ.ರಾ. ಬೇಂದ್ರೆ':'ಹುಟ್ಟೂರು: ಧಾರವಾಡ','ಶಿವರಾಮ ಕಾರಂತ':'ಹುಟ್ಟೂರು: ಕೋಟ, ಉಡುಪಿ ಜಿಲ್ಲೆ','ಮಾಸ್ತಿ ವೆಂಕಟೇಶ ಅಯ್ಯಂಗಾರ್':'ಹುಟ್ಟೂರು: ಹುಂಗೇನಹಳ್ಳಿ, ಕೋಲಾರ ಜಿಲ್ಲೆ','ವಿ.ಕೃ. ಗೋಕಾಕ್':'ಹುಟ್ಟೂರು: ಸವಣೂರು, ಹಾವೇರಿ ಜಿಲ್ಲೆ','ಯು.ಆರ್. ಅನಂತಮೂರ್ತಿ':'ಹುಟ್ಟೂರು: ಮೇಳಿಗೆ, ತೀರ್ಥಹಳ್ಳಿ ತಾಲ್ಲೂಕು, ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ','ಗಿರೀಶ್ ಕಾರ್ನಾಡ್':'ಬಾಲ್ಯ ಕಳೆದದ್ದು: ಶಿರಸಿ, ಉತ್ತರ ಕನ್ನಡ ಜಿಲ್ಲೆ','ಚಂದ್ರಶೇಖರ ಕಂಬಾರ':'ಹುಟ್ಟೂರು: ಘೋಡಗೇರಿ, ಬೈಲಹೊಂಗಲ ತಾಲ್ಲೂಕು, ಬೆಳಗಾವಿ ಜಿಲ್ಲೆ','ಸರ್ ಎಂ. ವಿಶ್ವೇಶ್ವರಯ್ಯ':'ಹುಟ್ಟೂರು: ಮುದ್ದೇನಹಳ್ಳಿ, ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಜಿಲ್ಲೆ','ಸಿ.ಎನ್.ಆರ್. ರಾವ್':'ಹುಟ್ಟೂರು: ಬೆಂಗಳೂರು','ಯು.ಆರ್. ರಾವ್':'ಹುಟ್ಟೂರು: ಅದಮಾರು, ಉಡುಪಿ ಜಿಲ್ಲೆ','ರಾಜಾ ರಾಮಣ್ಣ':'ಹುಟ್ಟೂರು: ತುಮಕೂರು','ಎಚ್. ನರಸಿಂಹಯ್ಯ':'ಹುಟ್ಟೂರು: ಹೊಸೂರು, ಗೌರಿಬಿದನೂರು ತಾಲ್ಲೂಕು, ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಜಿಲ್ಲೆ','ಡಾ. ರಾಜಕುಮಾರ್':'ಹುಟ್ಟೂರು: ಗಾಜನೂರು (ಕರ್ನಾಟಕ–ತಮಿಳುನಾಡು ಗಡಿ)','ಡಾ. ದೇವಿ ಪ್ರಸಾದ್ ಶೆಟ್ಟಿ':'ಹುಟ್ಟೂರು: ಕಿನ್ನಿಗೋಳಿ, ದಕ್ಷಿಣ ಕನ್ನಡ ಜಿಲ್ಲೆ','ಡಾ. ಎಚ್. ಸುದರ್ಶನ್':'ಸೇವೆಯ ನೆಲ: ಬಿಳಿಗಿರಿರಂಗನ ಬೆಟ್ಟ, ಚಾಮರಾಜನಗರ ಜಿಲ್ಲೆ','ಡಾ. ಶಿವಕುಮಾರ ಸ್ವಾಮೀಜಿ':'ಹುಟ್ಟೂರು: ವೀರಾಪುರ, ಮಾಗಡಿ ತಾಲ್ಲೂಕು, ರಾಮನಗರ ಜಿಲ್ಲೆ','ಡಾ. ವೀರೇಂದ್ರ ಹೆಗ್ಗಡೆ':'ಸೇವೆಯ ನೆಲ: ಧರ್ಮಸ್ಥಳ, ಬೆಳ್ತಂಗಡಿ ತಾಲ್ಲೂಕು','ಪಂಡಿತ್ ಭೀಮಸೇನ ಜೋಶಿ':'ಹುಟ್ಟೂರು: ರೋಣ, ಗದಗ ಜಿಲ್ಲೆ','ಸುಧಾ ಮೂರ್ತಿ':'ಹುಟ್ಟೂರು: ಶಿಗ್ಗಾವಿ, ಹಾವೇರಿ ಜಿಲ್ಲೆ'};
+const VILL={'ಪಂಪ':'ಹುಟ್ಟೂರು: ಅಣ್ಣಿಗೇರಿ, ಧಾರವಾಡ ಜಿಲ್ಲೆ (ಎಂದು ಹೇಳಲಾಗುತ್ತದೆ)','ಬಸವಣ್ಣ':'ಹುಟ್ಟೂರು: ಬಸವನ ಬಾಗೇವಾಡಿ, ವಿಜಯಪುರ ಜಿಲ್ಲೆ','ಅಕ್ಕ ಮಹಾದೇವಿ':'ಹುಟ್ಟೂರು: ಉಡುತಡಿ, ಶಿಕಾರಿಪುರ ತಾಲ್ಲೂಕು, ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ','ಕನಕದಾಸ':'ಹುಟ್ಟೂರು: ಬಾಡ, ಹಾವೇರಿ ಜಿಲ್ಲೆ','ಕುವೆಂಪು':'ಹುಟ್ಟೂರು: ಹಿರೇಕೊಡಿಗೆ, ಕೊಪ್ಪ ತಾಲ್ಲೂಕು, ಚಿಕ್ಕಮಗಳೂರು ಜಿಲ್ಲೆ','ದ.ರಾ. ಬೇಂದ್ರೆ':'ಹುಟ್ಟೂರು: ಧಾರವಾಡ','ಶಿವರಾಮ ಕಾರಂತ':'ಹುಟ್ಟೂರು: ಕೋಟ, ಉಡುಪಿ ಜಿಲ್ಲೆ','ಮಾಸ್ತಿ ವೆಂಕಟೇಶ ಅಯ್ಯಂಗಾರ್':'ಹುಟ್ಟೂರು: ಹುಂಗೇನಹಳ್ಳಿ, ಕೋಲಾರ ಜಿಲ್ಲೆ','ವಿ.ಕೃ. ಗೋಕಾಕ್':'ಹುಟ್ಟೂರು: ಸವಣೂರು, ಹಾವೇರಿ ಜಿಲ್ಲೆ','ಯು.ಆರ್. ಅನಂತಮೂರ್ತಿ':'ಹುಟ್ಟೂರು: ಮೇಳಿಗೆ, ತೀರ್ಥಹಳ್ಳಿ ತಾಲ್ಲೂಕು, ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ','ಗಿರೀಶ್ ಕಾರ್ನಾಡ್':'ಬಾಲ್ಯ ಕಳೆದದ್ದು: ಶಿರಸಿ, ಉತ್ತರ ಕನ್ನಡ ಜಿಲ್ಲೆ','ಚಂದ್ರಶೇಖರ ಕಂಬಾರ':'ಹುಟ್ಟೂರು: ಘೋಡಗೇರಿ, ಬೈಲಹೊಂಗಲ ತಾಲ್ಲೂಕು, ಬೆಳಗಾವಿ ಜಿಲ್ಲೆ','ಸರ್ ಎಂ. ವಿಶ್ವೇಶ್ವರಯ್ಯ':'ಹುಟ್ಟೂರು: ಮುದ್ದೇನಹಳ್ಳಿ, ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಜಿಲ್ಲೆ','ಸಿ.ಎನ್.ಆರ್. ರಾವ್':'ಹುಟ್ಟೂರು: ಬೆಂಗಳೂರು','ಯು.ಆರ್. ರಾವ್':'ಹುಟ್ಟೂರು: ಅದಮಾರು, ಉಡುಪಿ ಜಿಲ್ಲೆ','ರಾಜಾ ರಾಮಣ್ಣ':'ಹುಟ್ಟೂರು: ತುಮಕೂರು','ಎಚ್. ನರಸಿಂಹಯ್ಯ':'ಹುಟ್ಟೂರು: ಹೊಸೂರು, ಗೌರಿಬಿದನೂರು ತಾಲ್ಲೂಕು, ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಜಿಲ್ಲೆ','ಡಾ. ರಾಜಕುಮಾರ್':'ಹುಟ್ಟೂರು: ಗಾಜನೂರು (ಕರ್ನಾಟಕ–ತಮಿಳುನಾಡು ಗಡಿ)','ಡಾ. ದೇವಿ ಪ್ರಸಾದ್ ಶೆಟ್ಟಿ':'ಹುಟ್ಟೂರು: ಕಿನ್ನಿಗೋಳಿ, ದಕ್ಷಿಣ ಕನ್ನಡ ಜಿಲ್ಲೆ','ಡಾ. ಎಚ್. ಸುದರ್ಶನ್':'ಸೇವೆಯ ನೆಲ: ಬಿಳಿಗಿರಿರಂಗನ ಬೆಟ್ಟ, ಚಾಮರಾಜನಗರ ಜಿಲ್ಲೆ','ಡಾ. ಶಿವಕುಮಾರ ಸ್ವಾಮೀಜಿ':'ಹುಟ್ಟೂರು: ವೀರಾಪುರ, ಮಾಗಡಿ ತಾಲ್ಲೂಕು, ರಾಮನಗರ ಜಿಲ್ಲೆ','ಡಾ. ವೀರೇಂದ್ರ ಹೆಗ್ಗಡೆ':'ಸೇವೆಯ ನೆಲ: ಧರ್ಮಸ್ಥಳ, ಬೆಳ್ತಂಗಡಿ ತಾಲ್ಲೂಕು','ಪಂಡಿತ್ ಭೀಮಸೇನ ಜೋಶಿ':'ಹುಟ್ಟೂರು: ರೋಣ, ಗದಗ ಜಿಲ್ಲೆ','ಸುಧಾ ಮೂರ್ತಿ':'ಹುಟ್ಟೂರು: ಶಿಗ್ಗಾವಿ, ಹಾವೇರಿ ಜಿಲ್ಲೆ','ಪ್ರಕಾಶ್ ಪಡುಕೋಣೆ':'ಹುಟ್ಟೂರು: ಬೆಂಗಳೂರು ನಗರ','ಅನಿಲ್ ಕುಂಬ್ಳೆ':'ಹುಟ್ಟೂರು: ಬೆಂಗಳೂರು ನಗರ','ಜವಗಲ್ ಶ್ರೀನಾಥ್':'ಹುಟ್ಟೂರು: ಮೈಸೂರು ನಗರ','ವೇದಾ ಕೃಷ್ಣಮೂರ್ತಿ':'ಹುಟ್ಟೂರು: ಕಡೂರು ಪಟ್ಟಣ, ಚಿಕ್ಕಮಗಳೂರು ಜಿಲ್ಲೆ','ಎಂ.ಆರ್. ಪೂವಮ್ಮ':'ಹುಟ್ಟೂರು: ಗೋಣಿಕೊಪ್ಪಲು ಪಟ್ಟಣ, ಕೊಡಗು ಜಿಲ್ಲೆ'};
 const seg=new Intl.Segmenter('kn',{granularity:'grapheme'});
 function mono(n){n=n.replace(/^(ಡಾ\.\s*|ಸರ್\s*|ಪಂಡಿತ್\s*)/,'');return [...seg.segment(n)][0].segment}
 function people(list,el){list.forEach(p=>{const d=document.createElement('article');d.className='person';
   d.innerHTML=`<div class="mono" aria-hidden="true">${esc(mono(p[0]))}</div><div style="min-width:0"><h3>${esc(p[0])}</h3><div class="era">${esc(p[1])}</div>${VILL[p[0]]?'<div class="vil">'+esc(VILL[p[0]])+'</div>':''}<p>${esc(p[2])}</p>${p[3]?`<span class="badge">${esc(p[3])}</span>`:''}</div>`;
   el.appendChild(d)})}
-people(PEOPLE.poets,$('#poets-grid'));people(PEOPLE.sci,$('#sci-grid'));people(PEOPLE.ach,$('#ach-grid'));
+people(PEOPLE.poets,$('#poets-grid'));people(PEOPLE.sci,$('#sci-grid'));people(PEOPLE.ach,$('#ach-grid'));people(PEOPLE.sports,$('#sport-grid'));
 
 /* floating photos */
 const fs=$('#fstage');

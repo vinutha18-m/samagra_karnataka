@@ -53,6 +53,12 @@
     .callout h3{font:800 1.2rem var(--display);margin:0 0 6px}
     .callout p{margin:0;color:var(--muted)}
     .origin-note p{font-size:.9rem}
+    .origin-table-wrap{overflow-x:auto;background:#fff;border:2px solid var(--line);margin-top:18px}
+    .origin-table{width:100%;min-width:560px;border-collapse:collapse;font-size:.94rem}
+    .origin-table th,.origin-table td{padding:11px 16px;text-align:left;border-bottom:1px solid #F3E9CB}
+    .origin-table th{color:var(--muted);font-size:.85rem}
+    .origin-table th:nth-child(2),.origin-table th:nth-child(3),.origin-table td:nth-child(2),.origin-table td:nth-child(3){text-align:right;font-variant-numeric:tabular-nums}
+    .origin-table tr.total{font-weight:800;background:#FFF8E3}
     .coverage-note p{font-size:.95rem}
     .coverage-note small{font-size:.78rem;color:#806F68}
     .district-list{display:grid;gap:9px}
@@ -118,8 +124,20 @@
       </div>
 
       <aside class="callout origin-note">
-        <h3>ಇತರ ರಾಜ್ಯಗಳಿಂದ ಬಂದವರು ಮತ್ತು ಕನ್ನಡೇತರರು</h3>
-        <p>ಇವೆರಡೂ ಒಂದೇ ವರ್ಗವಲ್ಲ: ಇತರ ರಾಜ್ಯಗಳಿಂದ ಬಂದವರಲ್ಲಿ ಕನ್ನಡ ಮಾತನಾಡುವವರೂ ಇರಬಹುದು; ಕರ್ನಾಟಕದಲ್ಲೇ ಹುಟ್ಟಿದ ಕನ್ನಡೇತರರೂ ಇರಬಹುದು. 2025–26ರಲ್ಲಿ ಇವರ ನಿಖರ ಸಂಖ್ಯೆಯನ್ನು ತೋರಿಸುವ ವಿಶ್ವಾಸಾರ್ಹ ಜನಗಣತಿ ಎಣಿಕೆ ಲಭ್ಯವಿಲ್ಲ. ಆದ್ದರಿಂದ ಈ ಪುಟದಲ್ಲಿ ಊಹೆಯ ಶೇಕಡಾವಾರು ಅಥವಾ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿಲ್ಲ.</p>
+        <h3>ಬೆಂಗಳೂರು ನಗರ ಸಮೂಹ: 2011ರ ಜನನಸ್ಥಳದ ಅಂದಾಜು ಹಂಚಿಕೆ</h3>
+        <p>ಈ ನಗರ ಸಮೂಹದ ಒಟ್ಟು ಜನಸಂಖ್ಯೆ ಸುಮಾರು 85 ಲಕ್ಷ ಎಂದು ಪರಿಗಣಿಸಿ ನೀಡಲಾದ ಅಂದಾಜುಗಳು. ಇದು ಬೆಂಗಳೂರು ನಗರ ಜಿಲ್ಲೆಯ 96.2 ಲಕ್ಷದ ಜಿಲ್ಲಾವಾರು ಎಣಿಕೆಗೆ ಬೇರೆ ಭೌಗೋಳಿಕ ವ್ಯಾಖ್ಯಾನ.</p>
+        <div class="origin-table-wrap">
+          <table class="origin-table">
+            <thead><tr><th>ವರ್ಗ</th><th>ಪಾಲು</th><th>ಅಂದಾಜು ಜನರು</th></tr></thead>
+            <tbody>
+              <tr><td>ಬೆಂಗಳೂರಿನಲ್ಲಿ ಜನಿಸಿದವರು</td><td>~49%</td><td>~41 ಲಕ್ಷ</td></tr>
+              <tr><td>ಕರ್ನಾಟಕದ ಇತರ ಭಾಗಗಳಿಂದ ಬಂದವರು</td><td>~33%</td><td>~28 ಲಕ್ಷ</td></tr>
+              <tr class="total"><td>ಕರ್ನಾಟಕದಿಂದ ಒಟ್ಟು</td><td>~82%</td><td>~70 ಲಕ್ಷ</td></tr>
+              <tr><td>ಇತರ ರಾಜ್ಯಗಳಿಂದ ಬಂದವರು</td><td>~18%</td><td>~15 ಲಕ್ಷ</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:12px">ಇವು ಸುತ್ತುಗಟ್ಟಿದ ಅಂದಾಜುಗಳು; ಪ್ರತ್ಯೇಕವಾಗಿ ಸುತ್ತುಗಟ್ಟಿದ ಸಂಖ್ಯೆಗಳ ಮೊತ್ತದಲ್ಲಿ ಸಣ್ಣ ವ್ಯತ್ಯಾಸ ಇರಬಹುದು.</p>
       </aside>
 
       <aside class="callout coverage-note">

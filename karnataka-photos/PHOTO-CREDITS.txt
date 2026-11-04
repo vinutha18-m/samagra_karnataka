@@ -240,3 +240,21 @@ place-44.jpg
   Photo: Abdul sohail
   Source: https://commons.wikimedia.org/wiki/File:Gulbarga_fort_2.jpg
   License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+
+Culture section photos (loaded directly from Wikimedia Commons)
+===============================================================
+
+Yakshagana_Performance.jpg
+  Photo: Vinay.hegde2
+  Source: https://commons.wikimedia.org/wiki/File:Yakshagana_Performance.jpg
+  License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+
+Bisi_Bele_Bath-Diu-DSC001.jpg
+  Photo: Mahi Gajwani
+  Source: https://commons.wikimedia.org/wiki/File:Bisi_Bele_Bath-Diu-DSC001.jpg
+  License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0
+
+Channapatna-toys.jpg
+  Photo: HPNadig
+  Source: https://commons.wikimedia.org/wiki/File:Channapatna-toys.jpg
+  License: CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0
