@@ -172,12 +172,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .floatsec{background:var(--yellow);color:var(--on-yellow);overflow:hidden}
 .floatsec .sec-head p{color:#4A2A10}
 .fstage{display:flex;flex-wrap:wrap;gap:40px 28px;justify-content:center;padding-block:24px 48px;perspective:900px}
-.ph{width:220px;background:#fff;color:#2B0A0E;padding:10px 10px 14px;box-shadow:0 18px 30px rgba(80,10,10,.28);animation:bob var(--t,7s) ease-in-out infinite alternate;animation-delay:var(--d,0s);transform:translateY(var(--y,0)) rotate(var(--r,0deg));will-change:transform}
+.ph{width:220px;background:#fff;color:#2B0A0E;padding:10px 10px 14px;box-shadow:0 18px 30px rgba(80,10,10,.28);animation:bob var(--t,4s) ease-in-out infinite alternate;animation-delay:var(--d,0s);transform:translateY(var(--y,0)) rotate(var(--r,0deg));will-change:transform}
 .ph:nth-child(3n+1){--y:14px}.ph:nth-child(3n+2){--y:-18px}.ph:nth-child(3n){--y:30px}
 .ph svg,.ph img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#ffe9a3}
 .ph figcaption{font-family:var(--f-display);font-weight:800;font-size:1.05rem;margin-top:10px;line-height:1.2}
 .ph small{display:block;font-family:var(--f-body);font-weight:500;font-size:.8rem;color:#6B4A4D}
-@keyframes bob{from{transform:translateY(var(--y,0)) rotate(var(--r,0deg))}to{transform:translateY(calc(var(--y,0) - 26px)) rotate(calc(var(--r,0deg) * -1))}}
+@keyframes bob{from{transform:translateY(var(--y,0)) rotate(var(--r,0deg))}to{transform:translateY(calc(var(--y,0) - 32px)) rotate(var(--r,0deg))}}
 .upload{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;margin-top:8px}
 .upload input{display:none}
 
@@ -1040,12 +1040,12 @@ const FL=[
   ['ಬೇಲೂರು','ಹಾಸನ','karnataka-photos/belur-temple.jpg',-2,6.8],
   ['ಮೈಸೂರು ದಸರಾ','ಮೈಸೂರು','karnataka-photos/mysore-dasara.jpg',3,9.2]
 ];
-FL.forEach((f,i)=>{const e=document.createElement('figure');e.className='ph';e.style.cssText='margin:0;--r:'+f[3]+'deg;--t:'+f[4]+'s;--d:'+(-i*0.9)+'s';
+FL.forEach((f,i)=>{const e=document.createElement('figure');e.className='ph';e.style.cssText='margin:0;--r:'+f[3]+'deg;--t:'+Math.max(3.2,f[4]*0.55)+'s;--d:'+(-i*0.45)+'s';
   e.innerHTML=`<img alt="${f[0]}" src="${f[2]}" loading="lazy"><figcaption>${f[0]}<small>${f[1]} ಜಿಲ್ಲೆ</small></figcaption>`;
   e.querySelector('img').style.cssText='width:100%;height:100%;display:block;object-fit:cover';fs.appendChild(e)});
 $('#file').addEventListener('change',ev=>{
   [...ev.target.files].slice(0,12).forEach((file,j)=>{const r=new FileReader();r.onload=()=>{
-    const e=document.createElement('figure');e.className='ph';e.style.cssText='margin:0;--r:'+(j%2?3:-3)+'deg;--t:'+(7+j)+'s';
+    const e=document.createElement('figure');e.className='ph';e.style.cssText='margin:0;--r:'+(j%2?3:-3)+'deg;--t:'+(3.5+j*0.35)+'s';
     e.innerHTML='<img alt="ನಿಮ್ಮ ಫೋಟೋ"><figcaption>ನಿಮ್ಮ ಊರು<small>ನೀವು ಸೇರಿಸಿದ ಚಿತ್ರ</small></figcaption>';
     e.querySelector('img').src=r.result;fs.prepend(e)};r.readAsDataURL(file)});
   ev.target.value='';
@@ -1054,7 +1054,7 @@ const PAL=[
   {n:'ಮೈಸೂರು ಅರಮನೆ',s:'ಅಂಬಾ ವಿಲಾಸ ಅರಮನೆ · ಮೈಸೂರು ಜಿಲ್ಲೆ',img:'karnataka-photos/mysore-palace.jpg'},
   {n:'ಬೆಂಗಳೂರು ಅರಮನೆ',s:'ಟ್ಯೂಡರ್ ಶೈಲಿಯ ಅರಮನೆ · ಬೆಂಗಳೂರು ನಗರ',img:'karnataka-photos/bengaluru-palace.jpg'}
 ];
-PAL.forEach((p,i)=>{const e=document.createElement('figure');e.className='ph big';e.style.margin='0';e.style.setProperty('--t',(7+i*1.5)+'s');e.style.setProperty('--d',(-i*2)+'s');
+PAL.forEach((p,i)=>{const e=document.createElement('figure');e.className='ph big';e.style.margin='0';e.style.setProperty('--t',(3.5+i*0.5)+'s');e.style.setProperty('--d',(-i*1)+'s');
   e.innerHTML='<div class="frame"><img alt="'+p.n+'" src="'+p.img+'" loading="lazy"></div><figcaption>'+p.n+'<small>'+p.s+'</small></figcaption>';$('#palaces').appendChild(e)});
 const NEWS=[
 ['fest','Gauri-Ganesha Festival: Bengaluru sees massive rush','Udayavani','https://udayavani.com/?p=1699373','ಗೌರಿ-ಗಣೇಶ ಹಬ್ಬಕ್ಕೆ ಊರಿಗೆ ಹೋಗುವವರಿಂದ ಬೆಂಗಳೂರಿನಲ್ಲಿ ಭಾರಿ ಜನಸಂದಣಿ.'],

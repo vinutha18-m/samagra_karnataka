@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="kn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#D3162B">
+  <meta name="description" content="ಬೆಂಗಳೂರು ಜನಸಂಖ್ಯೆಯ 2011ರ ಜನಗಣತಿ ಮತ್ತು ಇತ್ತೀಚಿನ ಅಂದಾಜು, ಉದ್ಯೋಗದ ಕುರಿತ ಸಂದರ್ಭ, ಹಾಗೂ ಕರ್ನಾಟಕದ ಜಿಲ್ಲಾ ಜನಸಂಖ್ಯೆ.">
+  <title>ಜನಸಂಖ್ಯೆ ಮತ್ತು ಉದ್ಯೋಗ | ಸಮಗ್ರ ಕರ್ನಾಟಕ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600;800&family=Noto+Sans+Kannada:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:light;--yellow:#FFC400;--red:#D3162B;--bg:#FFFCF2;--fg:#2B0A0E;--muted:#6B4A4D;--line:#EBD9A8;--display:'Baloo Tamma 2','Noto Sans Kannada',system-ui,sans-serif;--body:'Noto Sans Kannada',system-ui,sans-serif}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--body)}
+    a{color:inherit}
+    .bar{background:var(--red);color:#FFF7DD}
+    .wrap{width:min(100% - 32px,1000px);margin-inline:auto}
+    .bar .wrap{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font:800 1.2rem var(--display);text-decoration:none}
+    .back{font-weight:700;text-decoration:none}
+    main{padding-block:64px 80px}
+    .eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.08em;color:#8A2226}
+    h1,h2{font-family:var(--display);line-height:1.2}
+    h1{font-size:clamp(2.4rem,8vw,4.4rem);margin:8px 0}
+    .intro{max-width:720px;color:var(--muted);font-size:1.08rem}
+    .year{display:inline-block;margin-top:12px;padding:4px 14px;border-radius:999px;background:var(--yellow);font-weight:700}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px;margin:36px 0}
+    .stat{padding:22px;background:#fff;border:2px solid var(--line);border-top:6px solid var(--red)}
+    .stat:nth-child(even){border-top-color:var(--yellow)}
+    .stat strong{display:block;font:800 clamp(1.7rem,5vw,2.4rem)/1.2 var(--display);font-variant-numeric:tabular-nums}
+    .stat span{color:var(--muted);font-size:.95rem}
+    .note{padding:20px 24px;background:#FFF1C2;border-left:5px solid var(--red)}
+    .note h2{font-size:1.4rem;margin:0 0 6px}
+    .note p{margin:0}
+    .source{margin-top:24px;color:var(--muted);font-size:.92rem}
+    .source a{color:#8A2226;font-weight:700}
+    .section{margin-top:64px}
+    .section h2{font-size:clamp(1.7rem,5vw,2.6rem);margin:0 0 8px}
+    .section-intro{max-width:780px;color:var(--muted);margin:0 0 24px}
+    .chart{display:grid;gap:18px;padding:24px;background:#fff;border:2px solid var(--line);margin:24px 0}
+    .bar-row{display:grid;grid-template-columns:minmax(150px,210px) minmax(0,1fr) minmax(105px,145px);align-items:center;gap:12px}
+    .bar-label{font-weight:700}
+    .track{height:28px;background:#FFF1C2;overflow:hidden}
+    .bar{display:block;height:100%;background:var(--red)}
+    .bar.estimate{background:#B58400}
+    .bar-value{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+    .chart-key{display:flex;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:.9rem}
+    .chart-key span{display:inline-flex;align-items:center;gap:7px}
+    .swatch{width:14px;height:14px;background:var(--red)}
+    .swatch.estimate{background:#B58400}
+    .callout{padding:20px 24px;background:#fff;border:2px solid var(--line);margin-top:18px}
+    .callout h3{font:800 1.2rem var(--display);margin:0 0 6px}
+    .callout p{margin:0;color:var(--muted)}
+    .origin-note p{font-size:.9rem}
+    .coverage-note p{font-size:.95rem}
+    .coverage-note small{font-size:.78rem;color:#806F68}
+    .district-list{display:grid;gap:9px}
+    .district-row{display:grid;grid-template-columns:minmax(130px,190px) minmax(0,1fr) minmax(92px,120px);align-items:center;gap:10px}
+    .district-name{font-size:.92rem;font-weight:700}
+    .district-track{height:16px;background:#FFF1C2;overflow:hidden}
+    .district-track span{display:block;height:100%;background:var(--red)}
+    .district-value{text-align:right;font-size:.88rem;font-variant-numeric:tabular-nums}
+    .small-note{color:var(--muted);font-size:.9rem;margin-top:18px}
+    .taluk-list{display:grid;gap:12px;margin-top:24px}
+    .taluk-group{background:#fff;border:2px solid var(--line)}
+    .taluk-group summary{padding:14px 18px;font:800 1.1rem var(--display);cursor:pointer}
+    .taluk-group summary::marker{color:var(--red)}
+    .taluk-group[open] summary{border-bottom:1px solid var(--line)}
+    .taluk-table{width:100%;border-collapse:collapse;font-size:.94rem}
+    .taluk-table th,.taluk-table td{padding:8px 18px;text-align:left;border-bottom:1px solid #F3E9CB}
+    .taluk-table th:last-child,.taluk-table td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+    .taluk-table th{color:var(--muted);font-size:.85rem}
+    .taluk-table tbody tr:last-child td{border-bottom:0}
+    @media(max-width:520px){main{padding-block:40px 56px}.bar .wrap{min-height:58px}.stat{padding:18px}}
+    @media(max-width:600px){
+      .bar-row{grid-template-columns:minmax(0,1fr) auto;gap:6px 10px}
+      .bar-label{grid-column:1}.bar-value{grid-column:2;grid-row:1}
+      .track{grid-column:1/-1;grid-row:2}
+      .district-row{grid-template-columns:minmax(0,1fr) auto;gap:5px 10px}
+      .district-name{grid-column:1}.district-value{grid-column:2;grid-row:1}
+      .district-track{grid-column:1/-1;grid-row:2}
+    }
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <div class="wrap">
+      <a class="brand" href="index.html">ಸಮಗ್ರ ಕರ್ನಾಟಕ</a>
+      <a class="back" href="index.html">ಮುಖ್ಯ ಪುಟಕ್ಕೆ ←</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="eyebrow">ಜನಗಣತಿ ಮತ್ತು ಲಭ್ಯವಿರುವ ಅಂದಾಜುಗಳು</p>
+    <h1>ಬೆಂಗಳೂರು ಜನಸಂಖ್ಯೆ ಮತ್ತು ಉದ್ಯೋಗ</h1>
+    <p class="intro">ಜನಸಂಖ್ಯೆಯ ಬೆಳವಣಿಗೆ ಉದ್ಯೋಗ, ವಸತಿ ಮತ್ತು ಸಾರಿಗೆ ಮೇಲಿನ ಒತ್ತಡವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ. ಆದರೆ ಜನಸಂಖ್ಯೆಯ ಅಂಕಿ ಮಾತ್ರ ಉದ್ಯೋಗ ಸಿಗದಿರುವುದಕ್ಕೆ ಕಾರಣವನ್ನು ಸಾಬೀತುಪಡಿಸುವುದಿಲ್ಲ.</p>
+
+    <section class="section" aria-labelledby="bengaluru-title">
+      <h2 id="bengaluru-title">ಬೆಂಗಳೂರು: 2011ರಿಂದ ಇತ್ತೀಚಿನ ಅಂದಾಜಿನವರೆಗೆ</h2>
+      <p class="section-intro">2011ರಲ್ಲಿ ಬೆಂಗಳೂರು ನಗರ ಜಿಲ್ಲೆಯ ಜನಸಂಖ್ಯೆ 96.2 ಲಕ್ಷ. ಕರ್ನಾಟಕದ ಆರ್ಥಿಕ ಮತ್ತು ಅಂಕಿಅಂಶ ನಿರ್ದೇಶನಾಲಯದ (DES) 2025ರ ಅಂದಾಜು ಸುಮಾರು 1.31 ಕೋಟಿ. ಇದು ಜನಗಣತಿಯ ಎಣಿಕೆ ಅಲ್ಲ; 2026ರ ಅಧಿಕೃತ ಜನಗಣತಿ ಅಂಕಿ ಲಭ್ಯವಿಲ್ಲ.</p>
+      <span class="year">2011 ಜನಗಣತಿ ವಿರುದ್ಧ 2025 ಅಂದಾಜು</span>
+
+      <div class="chart" role="img" aria-label="ಬೆಂಗಳೂರು ನಗರ ಜಿಲ್ಲೆಯ ಜನಸಂಖ್ಯೆ: 2011 ಜನಗಣತಿಯಲ್ಲಿ 96.2 ಲಕ್ಷ; DES 2025 ಅಂದಾಜಿನಲ್ಲಿ ಸುಮಾರು 1.31 ಕೋಟಿ. ಅಂದಾಜು ಬೆಳವಣಿಗೆ ಸುಮಾರು 36 ಶೇಕಡಾ.">
+        <div class="bar-row">
+          <span class="bar-label">2011 ಜನಗಣತಿ</span>
+          <div class="track"><span class="bar" style="width:73.4%"></span></div>
+          <strong class="bar-value">96.2 ಲಕ್ಷ</strong>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">2025 DES ಅಂದಾಜು</span>
+          <div class="track"><span class="bar estimate" style="width:100%"></span></div>
+          <strong class="bar-value">ಸುಮಾರು 1.31 ಕೋಟಿ</strong>
+        </div>
+        <div class="chart-key" aria-hidden="true">
+          <span><i class="swatch"></i>ಜನಗಣತಿ ಎಣಿಕೆ</span>
+          <span><i class="swatch estimate"></i>DES ಅಂದಾಜು</span>
+        </div>
+      </div>
+
+      <aside class="callout origin-note">
+        <h3>ಇತರ ರಾಜ್ಯಗಳಿಂದ ಬಂದವರು ಮತ್ತು ಕನ್ನಡೇತರರು</h3>
+        <p>ಇವೆರಡೂ ಒಂದೇ ವರ್ಗವಲ್ಲ: ಇತರ ರಾಜ್ಯಗಳಿಂದ ಬಂದವರಲ್ಲಿ ಕನ್ನಡ ಮಾತನಾಡುವವರೂ ಇರಬಹುದು; ಕರ್ನಾಟಕದಲ್ಲೇ ಹುಟ್ಟಿದ ಕನ್ನಡೇತರರೂ ಇರಬಹುದು. 2025–26ರಲ್ಲಿ ಇವರ ನಿಖರ ಸಂಖ್ಯೆಯನ್ನು ತೋರಿಸುವ ವಿಶ್ವಾಸಾರ್ಹ ಜನಗಣತಿ ಎಣಿಕೆ ಲಭ್ಯವಿಲ್ಲ. ಆದ್ದರಿಂದ ಈ ಪುಟದಲ್ಲಿ ಊಹೆಯ ಶೇಕಡಾವಾರು ಅಥವಾ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿಲ್ಲ.</p>
+      </aside>
+
+      <aside class="callout coverage-note">
+        <h3>ಉದ್ಯೋಗಾವಕಾಶಗಳ ಮೇಲಿನ ಒತ್ತಡ</h3>
+        <p>ವೇಗವಾಗಿ ಹೆಚ್ಚುತ್ತಿರುವ ಜನಸಂಖ್ಯೆ ಉದ್ಯೋಗಗಳಿಗೆ ಸ್ಪರ್ಧೆಯನ್ನು ಹೆಚ್ಚಿಸಬಹುದು; ಕರ್ನಾಟಕದ ಯುವಕರಿಗೆ ಸ್ಥಳೀಯ ಅವಕಾಶಗಳ ಬಗ್ಗೆ ಇರುವ ಕಳವಳವನ್ನು ಗಂಭೀರವಾಗಿ ಪರಿಗಣಿಸಬೇಕು. ಆದರೆ ಈ ಅಂಕಿ ಮಾತ್ರ “ಹೊರರಾಜ್ಯದವರು ಬಂದದ್ದರಿಂದಲೇ ಸ್ಥಳೀಯರಿಗೆ ಕೆಲಸ ಸಿಗುತ್ತಿಲ್ಲ” ಎಂದು ಸಾಬೀತುಪಡಿಸುವುದಿಲ್ಲ. ಉದ್ಯೋಗದ ಬೆಳವಣಿಗೆ, ಕೌಶಲ್ಯ ಹೊಂದಾಣಿಕೆ, ವೇತನ, ನೇಮಕಾತಿ ಮತ್ತು ಜಿಲ್ಲಾವಾರು ಉದ್ಯೋಗದ ಅಂಕಿ-ಅಂಶಗಳನ್ನೂ ಪರಿಶೀಲಿಸಬೇಕು.</p>
+      </aside>
+      <p class="small-note">ಹೋಲಿಕೆಯ ಮಿತಿ: 2011ರ ಜನಗಣತಿ ಎಣಿಕೆ ಮತ್ತು 2025ರ DES ಅಂದಾಜು ಬೇರೆ ವಿಧಾನ/ಪ್ರದೇಶ ವ್ಯಾಖ್ಯಾನಗಳನ್ನು ಬಳಸಿರಬಹುದು. ಹೀಗಾಗಿ ವ್ಯತ್ಯಾಸವು ಸೂಚಕ ಹೋಲಿಕೆ ಮಾತ್ರ; ನಿಖರ ಹೊಸ ಜನಗಣತಿ ಫಲಿತಾಂಶವಲ್ಲ.</p>
+      <p class="source">ಮೂಲಗಳು: <a href="https://censusindia.gov.in/census.website/data/census-tables" target="_blank" rel="noopener noreferrer">ಭಾರತದ ಜನಗಣತಿ — ಕೋಷ್ಟಕಗಳು</a>; <a href="https://des.karnataka.gov.in/" target="_blank" rel="noopener noreferrer">ಕರ್ನಾಟಕ ಆರ್ಥಿಕ ಮತ್ತು ಅಂಕಿಅಂಶ ನಿರ್ದೇಶನಾಲಯ (DES)</a>.</p>
+    </section>
+
+    <section class="section" aria-labelledby="district-title">
+      <h2 id="district-title">ಕರ್ನಾಟಕದ ಎಲ್ಲಾ ಜಿಲ್ಲೆಗಳ ಜನಸಂಖ್ಯೆ</h2>
+      <p class="section-intro">ಕೆಳಗಿನವುಗಳು 2011ರ ಜನಗಣತಿಯ ಜಿಲ್ಲಾವಾರು ಅಂಕಿ-ಅಂಶಗಳು. 2011ರ ನಂತರ ಜಿಲ್ಲೆಗಳ ಗಡಿಗಳು ಬದಲಾಗಿರುವುದರಿಂದ ಇವು ಇಂದಿನ 31 ಜಿಲ್ಲೆಗಳ ಗಡಿಗಳಿಗೆ ನೇರವಾಗಿ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ.</p>
+      <span class="year">ಕರ್ನಾಟಕ ಒಟ್ಟು: 6,10,95,297 · ಜನಗಣತಿ 2011</span>
+      <div class="district-list" role="list" aria-label="2011ರ ಜನಗಣತಿಯ ಜಿಲ್ಲಾವಾರು ಜನಸಂಖ್ಯೆ">
+        <div class="district-row" role="listitem"><span class="district-name">ಬೆಂಗಳೂರು ನಗರ</span><div class="district-track"><span style="width:100%"></span></div><span class="district-value">96,21,551</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಬೆಳಗಾವಿ</span><div class="district-track"><span style="width:49.7%"></span></div><span class="district-value">47,79,661</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಮೈಸೂರು</span><div class="district-track"><span style="width:31.2%"></span></div><span class="district-value">30,01,127</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ತುಮಕೂರು</span><div class="district-track"><span style="width:27.8%"></span></div><span class="district-value">26,78,980</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಕಲಬುರಗಿ</span><div class="district-track"><span style="width:26.7%"></span></div><span class="district-value">25,66,326</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಬಳ್ಳಾರಿ*</span><div class="district-track"><span style="width:25.5%"></span></div><span class="district-value">24,52,595</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ವಿಜಯಪುರ</span><div class="district-track"><span style="width:22.6%"></span></div><span class="district-value">21,77,331</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ದಕ್ಷಿಣ ಕನ್ನಡ</span><div class="district-track"><span style="width:21.7%"></span></div><span class="district-value">20,89,649</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ದಾವಣಗೆರೆ</span><div class="district-track"><span style="width:20.2%"></span></div><span class="district-value">19,45,497</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ರಾಯಚೂರು</span><div class="district-track"><span style="width:20.0%"></span></div><span class="district-value">19,28,812</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಬಾಗಲಕೋಟೆ</span><div class="district-track"><span style="width:19.6%"></span></div><span class="district-value">18,89,752</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಧಾರವಾಡ</span><div class="district-track"><span style="width:19.2%"></span></div><span class="district-value">18,47,023</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಮಂಡ್ಯ</span><div class="district-track"><span style="width:18.8%"></span></div><span class="district-value">18,05,769</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಹಾಸನ</span><div class="district-track"><span style="width:18.5%"></span></div><span class="district-value">17,76,421</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಶಿವಮೊಗ್ಗ</span><div class="district-track"><span style="width:18.2%"></span></div><span class="district-value">17,52,753</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಬೀದರ್</span><div class="district-track"><span style="width:17.7%"></span></div><span class="district-value">17,03,300</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಚಿತ್ರದುರ್ಗ</span><div class="district-track"><span style="width:17.3%"></span></div><span class="district-value">16,59,456</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಹಾವೇರಿ</span><div class="district-track"><span style="width:16.6%"></span></div><span class="district-value">15,97,668</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಕೋಲಾರ</span><div class="district-track"><span style="width:16.0%"></span></div><span class="district-value">15,36,401</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಉತ್ತರ ಕನ್ನಡ</span><div class="district-track"><span style="width:14.9%"></span></div><span class="district-value">14,37,169</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಕೊಪ್ಪಳ</span><div class="district-track"><span style="width:14.4%"></span></div><span class="district-value">13,89,920</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಚಿಕ್ಕಬಳ್ಳಾಪುರ</span><div class="district-track"><span style="width:13.0%"></span></div><span class="district-value">12,55,104</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಉಡುಪಿ</span><div class="district-track"><span style="width:12.2%"></span></div><span class="district-value">11,77,361</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಯಾದಗಿರಿ</span><div class="district-track"><span style="width:12.2%"></span></div><span class="district-value">11,74,271</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಚಿಕ್ಕಮಗಳೂರು</span><div class="district-track"><span style="width:11.8%"></span></div><span class="district-value">11,37,961</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ರಾಮನಗರ</span><div class="district-track"><span style="width:11.3%"></span></div><span class="district-value">10,82,636</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಗದಗ</span><div class="district-track"><span style="width:11.1%"></span></div><span class="district-value">10,64,570</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಚಾಮರಾಜನಗರ</span><div class="district-track"><span style="width:10.6%"></span></div><span class="district-value">10,20,791</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ</span><div class="district-track"><span style="width:10.3%"></span></div><span class="district-value">9,90,923</span></div>
+        <div class="district-row" role="listitem"><span class="district-name">ಕೊಡಗು</span><div class="district-track"><span style="width:5.8%"></span></div><span class="district-value">5,54,519</span></div>
+      </div>
+      <p class="small-note">* 2011ರ ಬಳ್ಳಾರಿ ಜಿಲ್ಲೆಯ ಅಂಕಿಯಲ್ಲಿ ಈಗಿನ ವಿಜಯನಗರ ಜಿಲ್ಲೆಯ ಪ್ರದೇಶವೂ ಸೇರಿದೆ. 2011ರ ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಸೇರದ ವಿಜಯನಗರವನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ತೋರಿಸಿದರೆ ಮೊತ್ತ ದ್ವಿಗುಣವಾಗುತ್ತದೆ. ಪ್ರತಿ ಚದರ ಕಿ.ಮೀ.ಗೆ 319 ಜನರು; ಸಾಕ್ಷರತೆ 75.36%.</p>
+      <p class="source">ಮೂಲ: <a href="https://censusindia.gov.in/census.website/data/census-tables" target="_blank" rel="noopener noreferrer">ಭಾರತದ ಜನಗಣತಿ 2011 — ಜನಗಣತಿ ಕೋಷ್ಟಕಗಳು</a>.</p>
+    </section>
+
+    <section class="section" aria-labelledby="taluk-title">
+      <h2 id="taluk-title">ತಾಲೂಕುವಾರು ಜನಸಂಖ್ಯೆ</h2>
+      <p class="section-intro">ಕೆಳಗೆ ಲಭ್ಯವಿರುವ 2011ರ ತಾಲೂಕು-ಮಟ್ಟದ ಅಂಕಿ-ಅಂಶಗಳನ್ನು ಜಿಲ್ಲಾವಾರು ನೀಡಲಾಗಿದೆ. ಜಿಲ್ಲೆ ಹೆಸರನ್ನು ಒತ್ತಿ ತಾಲೂಕುಗಳ ವಿವರ ತೆರೆಯಿರಿ. ಪ್ರತಿ ಪಟ್ಟಿಯ ಮೊತ್ತವು ಇಲ್ಲಿ ತೋರಿಸಿರುವ 2011ರ ಜಿಲ್ಲಾ ಮೊತ್ತಕ್ಕೆ ಹೊಂದುತ್ತದೆ.</p>
+      <div class="taluk-list">
+        <details class="taluk-group">
+          <summary>ಬೆಳಗಾವಿ ಜಿಲ್ಲೆ · 10 ತಾಲೂಕುಗಳು · ಒಟ್ಟು 47,79,661</summary>
+          <table class="taluk-table"><thead><tr><th>ತಾಲೂಕು</th><th>ಜನಸಂಖ್ಯೆ (2011)</th></tr></thead><tbody>
+            <tr><td>ಅಥಣಿ</td><td>5,25,832</td></tr><tr><td>ಬೆಳಗಾವಿ</td><td>9,57,373</td></tr><tr><td>ಚಿಕ್ಕೋಡಿ</td><td>6,28,800</td></tr><tr><td>ಗೋಕಾಕ</td><td>6,12,163</td></tr><tr><td>ಹುಕ್ಕೇರಿ</td><td>3,99,270</td></tr><tr><td>ಖಾನಾಪುರ</td><td>2,58,089</td></tr><tr><td>ಪರಸಗಡ (ಸವದತ್ತಿ)</td><td>3,52,929</td></tr><tr><td>ರಾಮದುರ್ಗ</td><td>2,58,527</td></tr><tr><td>ರಾಯಬಾಗ</td><td>4,05,489</td></tr><tr><td>ಸಂಪಗಾಂವ್ (ಬೈಲಹೊಂಗಲ)</td><td>3,81,189</td></tr>
+          </tbody></table>
+        </details>
+        <details class="taluk-group">
+          <summary>ಬಾಗಲಕೋಟೆ ಜಿಲ್ಲೆ · 7 ತಾಲೂಕುಗಳು · ಒಟ್ಟು 18,89,752</summary>
+          <table class="taluk-table"><thead><tr><th>ತಾಲೂಕು</th><th>ಜನಸಂಖ್ಯೆ (2011)</th></tr></thead><tbody>
+            <tr><td>ಬಾದಾಮಿ</td><td>3,30,860</td></tr><tr><td>ಬಾಗಲಕೋಟೆ</td><td>2,85,114</td></tr><tr><td>ಬಿಳಗಿ</td><td>1,60,294</td></tr><tr><td>ಹುನಗುಂದ</td><td>3,21,338</td></tr><tr><td>ಜಮಖಂಡಿ</td><td>4,70,176</td></tr><tr><td>ಮಹಾಲಿಂಗಪುರ</td><td>36,055</td></tr><tr><td>ಮುಧೋಳ</td><td>2,85,915</td></tr>
+          </tbody></table>
+        </details>
+        <details class="taluk-group">
+          <summary>ತುಮಕೂರು ಜಿಲ್ಲೆ · 10 ತಾಲೂಕುಗಳು · ಒಟ್ಟು 26,78,980</summary>
+          <table class="taluk-table"><thead><tr><th>ತಾಲೂಕು</th><th>ಜನಸಂಖ್ಯೆ (2011)</th></tr></thead><tbody>
+            <tr><td>ಚಿಕ್ಕನಾಯಕನಹಳ್ಳಿ</td><td>2,12,130</td></tr><tr><td>ಗುಬ್ಬಿ</td><td>2,62,518</td></tr><tr><td>ಕೊರಟಗೆರೆ</td><td>1,67,591</td></tr><tr><td>ಕುಣಿಗಲ್</td><td>2,25,783</td></tr><tr><td>ಮಧುಗಿರಿ</td><td>2,67,866</td></tr><tr><td>ಪಾವಗಡ</td><td>2,45,194</td></tr><tr><td>ಶಿರಾ</td><td>3,13,758</td></tr><tr><td>ತಿಪಟೂರು</td><td>2,22,749</td></tr><tr><td>ತುಮಕೂರು</td><td>5,92,397</td></tr><tr><td>ತುರವೇಕೆರೆ</td><td>1,68,994</td></tr>
+          </tbody></table>
+        </details>
+        <details class="taluk-group">
+          <summary>ಹಾಸನ ಜಿಲ್ಲೆ · 8 ತಾಲೂಕುಗಳು · ಒಟ್ಟು 17,76,421</summary>
+          <table class="taluk-table"><thead><tr><th>ತಾಲೂಕು</th><th>ಜನಸಂಖ್ಯೆ (2011)</th></tr></thead><tbody>
+            <tr><td>ಆಲೂರು</td><td>85,255</td></tr><tr><td>ಅರಕಲಗೂಡು</td><td>2,04,585</td></tr><tr><td>ಅರಸೀಕೆರೆ</td><td>3,15,339</td></tr><tr><td>ಬೇಲೂರು</td><td>1,84,458</td></tr><tr><td>ಚನ್ನರಾಯಪಟ್ಟಣ</td><td>2,79,798</td></tr><tr><td>ಹಾಸನ</td><td>3,96,166</td></tr><tr><td>ಹೊಳೆನರಸೀಪುರ</td><td>1,82,187</td></tr><tr><td>ಸಕಲೇಶಪುರ</td><td>1,28,633</td></tr>
+          </tbody></table>
+        </details>
+        <details class="taluk-group">
+          <summary>ಚಿಕ್ಕಮಗಳೂರು ಜಿಲ್ಲೆ · 7 ತಾಲೂಕುಗಳು · ಒಟ್ಟು 11,37,961</summary>
+          <table class="taluk-table"><thead><tr><th>ತಾಲೂಕು</th><th>ಜನಸಂಖ್ಯೆ (2011)</th></tr></thead><tbody>
+            <tr><td>ಚಿಕ್ಕಮಗಳೂರು</td><td>3,05,368</td></tr><tr><td>ಕಡೂರು</td><td>2,91,668</td></tr><tr><td>ಕೊಪ್ಪ</td><td>84,882</td></tr><tr><td>ಮೂಡಿಗೆರೆ</td><td>1,28,134</td></tr><tr><td>ನರಸಿಂಹರಾಜಪುರ</td><td>66,090</td></tr><tr><td>ಶೃಂಗೇರಿ</td><td>36,539</td></tr><tr><td>ತರೀಕೆರೆ</td><td>2,25,280</td></tr>
+          </tbody></table>
+        </details>
+        <details class="taluk-group">
+          <summary>ದಕ್ಷಿಣ ಕನ್ನಡ ಜಿಲ್ಲೆ · 5 ತಾಲೂಕುಗಳು · ಒಟ್ಟು 20,89,649</summary>
+          <table class="taluk-table"><thead><tr><th>ತಾಲೂಕು</th><th>ಜನಸಂಖ್ಯೆ (2011)</th></tr></thead><tbody>
+            <tr><td>ಬಂಟ್ವಾಳ</td><td>3,95,380</td></tr><tr><td>ಬೆಳ್ತಂಗಡಿ</td><td>2,66,589</td></tr><tr><td>ಮಂಗಳೂರು</td><td>9,94,602</td></tr><tr><td>ಪುತ್ತೂರು</td><td>2,87,851</td></tr><tr><td>ಸುಳ್ಯ</td><td>1,45,227</td></tr>
+          </tbody></table>
+        </details>
+        <details class="taluk-group">
+          <summary>ಉತ್ತರ ಕನ್ನಡ ಜಿಲ್ಲೆ · 12 ತಾಲೂಕುಗಳು · ಒಟ್ಟು 14,37,169</summary>
+          <table class="taluk-table"><thead><tr><th>ತಾಲೂಕು</th><th>ಜನಸಂಖ್ಯೆ (2011)</th></tr></thead><tbody>
+            <tr><td>ಅಂಕೋಲಾ</td><td>1,07,332</td></tr><tr><td>ಭಟ್ಕಳ</td><td>1,61,576</td></tr><tr><td>ದಾಂಡೇಲಿ</td><td>52,069</td></tr><tr><td>ಹಳಿಯಾಳ</td><td>1,19,357</td></tr><tr><td>ಹೊನ್ನಾವರ</td><td>1,66,264</td></tr><tr><td>ಕಾರವಾರ</td><td>1,55,213</td></tr><tr><td>ಕುಮಟಾ</td><td>1,54,280</td></tr><tr><td>ಮುಂಡಗೋಡ</td><td>1,06,174</td></tr><tr><td>ಸಿದ್ದಾಪುರ</td><td>97,322</td></tr><tr><td>ಶಿರಸಿ</td><td>1,86,908</td></tr><tr><td>ಸೂಪಾ (ಜೋಯಿಡಾ)</td><td>52,012</td></tr><tr><td>ಯಲ್ಲಾಪುರ</td><td>78,662</td></tr>
+          </tbody></table>
+        </details>
+      </div>
+      <aside class="callout">
+        <h3>ವ್ಯಾಪ್ತಿ ಮತ್ತು ಗಡಿಗಳ ಬಗ್ಗೆ</h3>
+        <p>ಈ ಪಟ್ಟಿಯಲ್ಲಿ ಲಭ್ಯವಿರುವ 7 ಜಿಲ್ಲೆಗಳ 59 ತಾಲೂಕುಗಳಷ್ಟೇ ಸೇರಿವೆ; ಕರ್ನಾಟಕದ ಎಲ್ಲಾ ತಾಲೂಕುಗಳ ಸಂಪೂರ್ಣ ಪಟ್ಟಿ ಅಲ್ಲ. <small>(ಪಟ್ಟಿಯ ಜಿಲ್ಲಾ ಗಡಿಗಳು 2011ರ ಜನಗಣತಿ ಗಡಿಗಳಿಗೆ ಸೇರಿದವು. ನಂತರ ಹೊಸ ತಾಲೂಕುಗಳು/ಜಿಲ್ಲೆಗಳು ರಚನೆಯಾಗಿರುವುದರಿಂದ ಇಂದಿನ ಆಡಳಿತ ಗಡಿಗಳೊಂದಿಗೆ ವ್ಯತ್ಯಾಸ ಇರಬಹುದು. ಉಳಿದ ಜಿಲ್ಲೆಗಳ ಪರಿಶೀಲಿತ ತಾಲೂಕುವಾರು ಅಂಕಿ ಲಭ್ಯವಾದಂತೆ ಸೇರಿಸಬಹುದು.)</small></p>
+      </aside>
+      <p class="source">ಉಲ್ಲೇಖ: <a href="https://censusindia.gov.in/census.website/data/census-tables" target="_blank" rel="noopener noreferrer">ಭಾರತದ ಜನಗಣತಿ — ಜಿಲ್ಲಾ ಪ್ರಾಥಮಿಕ ಜನಗಣತಿ ಸಾರಾಂಶ ಕೋಷ್ಟಕಗಳು (PCA)</a>. ತಾಲೂಕುವಾರು ಮೊತ್ತಗಳನ್ನು ಮೇಲೆ ತೋರಿಸಿರುವ ಜಿಲ್ಲಾ ಒಟ್ಟುಗಳೊಂದಿಗೆ ಪರಿಶೀಲಿಸಲಾಗಿದೆ.</p>
+    </section>
+  </main>
+</body>
+</html>
