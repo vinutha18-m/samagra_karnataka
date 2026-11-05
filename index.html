@@ -87,11 +87,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .stats{display:flex;gap:32px;flex-wrap:wrap}
 .stat b{display:block;font-family:var(--f-display);font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;color:var(--yellow);font-variant-numeric:tabular-nums}
 .stat span{font-size:.95rem;opacity:.92}
-.glyphs{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.glyphs i{position:absolute;font-style:normal;font-family:var(--f-display);font-weight:800;opacity:.14;animation:drift 14s ease-in-out infinite alternate}
-.hero-y .glyphs i{color:var(--red)}
-.hero-r .glyphs i{color:var(--yellow)}
-@keyframes drift{from{transform:translate3d(0,0,0) rotate(-6deg)}to{transform:translate3d(24px,-38px,0) rotate(8deg)}}
 .hero .wrap{position:relative;z-index:1}
 
 /* message */
@@ -272,7 +267,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:999px;z-index:70;font-size:.92rem}
 
 @media (prefers-reduced-motion:reduce){
-  .glyphs i,.ph{animation:none!important}
+  .ph{animation:none!important}
   html{scroll-behavior:auto}
   .btn{transition:none}
 }
@@ -372,14 +367,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <main id="top">
 <section class="hero" aria-label="ಸಮಗ್ರ ಕರ್ನಾಟಕ">
   <div class="hero-y">
-    <div class="glyphs" aria-hidden="true" id="gy"></div>
     <div class="wrap">
       <h1>ಸಮಗ್ರ ಕರ್ನಾಟಕ</h1>
       <div class="sub">ನಮ್ಮ ನಾಡು · ನಮ್ಮ ಹಕ್ಕು · ನಮ್ಮ ಭವಿಷ್ಯ</div>
     </div>
   </div>
   <div class="hero-r">
-    <div class="glyphs" aria-hidden="true" id="gr"></div>
     <div class="wrap">
       <div class="row">
         <div class="col">
@@ -949,17 +942,6 @@ function art(kind,seed){
   return '<svg viewBox="0 0 200 125" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky+(kind==='sea'||kind==='falls'||kind==='hills'?'':g)+b+'</svg>';
 }
 function artTall(kind,seed){return art(kind,seed).replace('viewBox="0 0 200 125"','viewBox="0 -125 200 250"').replace('preserveAspectRatio="xMidYMid slice"','preserveAspectRatio="xMidYMax slice"').replace('<rect width="200" height="125"','<rect y="-125" width="200" height="250"').replace('<circle cx="160" cy="28" r="14"','<circle cx="160" cy="-70" r="14"')}
-
-/* ---------- hero glyphs ---------- */
-(function(){
-  const letters=['ಕ','ನ','್ನ','ಡ','ನಾ','ಡು','ಅ','ಆ','ಓ','ಜ'];
-  [['gy',9],['gr',9]].forEach(([id,n])=>{
-    const el=document.getElementById(id);
-    for(let i=0;i<n;i++){const s=document.createElement('i');s.textContent=letters[(i*3+id.length)%letters.length];
-      s.style.left=(i*11+Math.random()*6)+'%';s.style.top=(10+Math.random()*60)+'%';
-      s.style.fontSize=(60+Math.random()*120)+'px';s.style.animationDuration=(10+Math.random()*10)+'s';s.style.animationDelay=(-Math.random()*10)+'s';el.appendChild(s)}
-  });
-})();
 
 /* ---------- pledge ---------- */
 (function(){
